@@ -1,0 +1,13 @@
+get_10_fold=function(input){
+    library(stringr)
+    results=unlist(stringr::strsplit(pow,"\\."))
+    pow10=results[1]
+    residual=as.numeric(results[2])
+    if(residual==0){
+        pow10=as.numeric(pow10)
+    }else{
+        pow10=as.numeric(pow10)-1
+    }
+    
+    return(pow10)
+}
